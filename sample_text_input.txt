@@ -1,0 +1,60 @@
+------------------------------------------------------------
+PROJECT REPORT
+------------------------------------------------------------
+Course Code: CSEG1032
+Course Title: Programming in C
+Project Title: call management system
+Student Names: Prince Raj Rawat
+Sap Id: 590022507
+Semester: 1st
+------------------------------------------------------------
+
+1. ABSTRACT
+This project implements a menu-driven call Management System using the C programming language. 
+The program allows the user to add, view, search, and delete contact records stored persistently in a file.
+It demonstrates the use of structures, file handling, and modular programming techniques to build a scalable 
+and maintainable software system.
+
+------------------------------------------------------------
+2. OBJECTIVE
+The objective of this project is to apply fundamental and intermediate concepts of the C language to 
+design a working application. It aims to help store contact info.
+- Use structures to represent complex data.
+- Employ functions and modular design for code organization.
+- Perform file operations for persistent data storage.
+
+------------------------------------------------------------
+3. PROBLEM DEFINITION
+Many small institutions and training centers require simple tools to maintain contact records. 
+Manually handling these records is error-prone and inefficient. 
+This project provides a basic command-line system for managing contact information 
+such as Name, phone number and email addresss in a text file.
+
+------------------------------------------------------------
+4. SYSTEM DESIGN AND ALGORITHM
+The system is modular, consisting of multiple source files:
+- `main.c` controls program flow and user interaction.
+- `call.c` handles CRUD (Create, Read, Update/Delete) operations.
+
+Algorithm (Add contact Example):
+1. Read contact details from user.
+2. Write the structure to file using `fwrite()`.
+3. Close the file.
+
+Each module uses header files for function prototypes and structure definitions.
+
+------------------------------------------------------------
+5. IMPLEMENTATION DETAILS
+Key Language Features Used:
+- **Structures** to represent contact info.
+- **File Handling** functions (`fopen`, `fwrite`, `fread`, `fclose`) to store and retrieve data.
+- **Functions** for modularity and clarity.
+
+Example code snippet (writing to file):
+
+```c
+FILE *fp = fopen("records.txt", "wb");
+if (fp) {
+    fwrite(&student, sizeof(Student), 1, fp);
+    fclose(fp);
+}
