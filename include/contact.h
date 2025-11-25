@@ -1,5 +1,5 @@
-#ifndef CALL_H
-#define CALL_H
+#ifndef CONTACT_H
+#define CONTACT_H
 
 #include <stdio.h>
 #include <string.h>
